@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #202031;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: show 2s ease-in-out;
+        }
+
+        /* CAKE */
+        .cake {
+            position: relative;
+            width: 220px;
+            height: 170px;
+            margin: auto;
+        }
+
+        .cake-body {
+            position: absolute;
+            bottom: 25px;
+            left: 10px;
+            width: 200px;
+            height: 65px;
+            background: #b69b8b;
+            border-radius: 5px;
+            box-shadow: inset 0 -10px #92786a;
+        }
+
+        /* TOP ICING */
+        .icing {
+            position: absolute;
+            top: 55px;
+            left: 10px;
+            width: 200px;
+            height: 35px;
+            background: #fff;
+            border-radius: 10px 10px 5px 5px;
+            z-index: 2;
+        }
+
+        /* ICING DRIPS */
+        .icing span {
+            position: absolute;
+            top: 25px;
+            width: 18px;
+            height: 25px;
+            background: #fff;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .icing span:nth-child(1) {
+            left: 25px;
+        }
+
+        .icing span:nth-child(2) {
+            left: 70px;
+            height: 18px;
+        }
+
+        .icing span:nth-child(3) {
+            right: 65px;
+            height: 27px;
+        }
+
+        .icing span:nth-child(4) {
+            right: 25px;
+            height: 18px;
+        }
+
+        /* CANDLE */
+        .candle {
+            position: absolute;
+            width: 7px;
+            height: 45px;
+            background: #fff;
+            top: 10px;
+            left: 106px;
+            z-index: 5;
+        }
+
+        /* FLAME */
+        .flame {
+            position: absolute;
+            top: -15px;
+            left: 102px;
+            width: 16px;
+            height: 24px;
+            background: #ffe66d;
+            border-radius: 50% 50% 50% 50%;
+            box-shadow:
+                0 0 8px #fff,
+                0 0 18px #ffe66d,
+                0 0 35px #ffd43b;
+            z-index: 6;
+            animation: fire 0.5s infinite alternate;
+        }
+
+        /* PLATE */
+        .plate {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 220px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        /* TEXT */
+        h1 {
+            margin: 5px 0 5px;
+            color: #ddd;
+            font-size: 25px;
+            font-style: italic;
+            font-weight: normal;
+            animation: glow 2s infinite alternate;
+        }
+
+        .name {
+            color: #888;
+            font-size: 17px;
+            margin-top: 0;
+        }
+
+        .message {
+            color: #777;
+            font-size: 14px;
+            margin-top: 18px;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fire {
+            0% {
+                transform: scale(1) rotate(-3deg);
+            }
+
+            100% {
+                transform: scale(1.15) rotate(3deg);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 3px #fff;
+            }
+
+            to {
+                text-shadow: 0 0 15px #fff;
+            }
+        }
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="cake">
+
+            <!-- Candle Flame -->
+            <div class="flame"></div>
+
+            <!-- Candle -->
+            <div class="candle"></div>
+
+            <!-- Cake Icing -->
+            <div class="icing">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Cake Body -->
+            <div class="cake-body"></div>
+
+            <!-- Plate -->
+            <div class="plate"></div>
+
+        </div>
+
+        <h1>happy birthday!</h1>
+
+        <!-- NAME -->
+        <div class="name">Asawa Ko! 🫶🏻</div>
+
+        <div class="message">
+            Wishing you all the best, I love youu alwayss, Ingat ka palagi ❤️
+        </div>
+
+    </div>
+
+</body>
+</html>
